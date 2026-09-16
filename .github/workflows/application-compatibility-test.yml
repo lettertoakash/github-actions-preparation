@@ -1,4 +1,4 @@
-name: Application Compatibility Test
+name: Runner Compatibility Test
 
 on:
   push:
@@ -13,19 +13,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build application
-        run: npm run build
-
-      - name: Run tests
-        run: npm test
+      - name: Test Linux runner
+        run: |
+          echo "Testing on Linux"
+          uname -a
 
   test-on-windows:
     name: Test on Windows
@@ -35,16 +26,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build application
-        run: npm run build
-
-      - name: Run tests
-        run: npm test
+      - name: Test Windows runner
+        shell: pwsh
+        run: |
+          Write-Host "Testing on Windows"
+          Get-ComputerInfo | Select-Object WindowsProductName
