@@ -1,0 +1,11 @@
+{
+  "name": "github-actions-preparation",
+  "version": "1.0.0",
+  "description": "Simple Node.js application for GitHub Actions practice",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "build": "node -e \"console.log('Build completed successfully')\"",
+    "test": "node --test"
+  }
+}
