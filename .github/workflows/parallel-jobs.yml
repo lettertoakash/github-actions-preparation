@@ -1,7 +1,7 @@
 name: Parallel Jobs Practice
 
 on:
-  push:
+  #push:
   workflow_dispatch:
 
 jobs:

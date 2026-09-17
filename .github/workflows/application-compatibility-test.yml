@@ -1,7 +1,7 @@
 name: Runner Compatibility Test
 
 on:
-  push:
+  #push:
   workflow_dispatch:
 
 jobs:
